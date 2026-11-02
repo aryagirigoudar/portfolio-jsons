@@ -2,6 +2,6 @@
   "name": "Public portfolio data",
   "description": "Git checkout reserved for approved public JSON, icons and resume artifacts. Separate data-repository publication is not wired or deployed.",
   "icon": null,
-  "updated_at": "2026-11-02T05:53:49Z",
-  "last_change": "Created the public-data checkout skeleton and Git configuration; no generated data or credentials were copied. Added text/binary attributes and reviewed the initial local commit contents."
+  "updated_at": "2026-11-02T06:14:05Z",
+  "last_change": "Connected the setup branch to the owner-created GitHub main branch and prepared an initial review PR; live deployment and synchronization remain disabled."
 }
