@@ -1,7 +1,7 @@
 {
   "name": "Public portfolio data",
-  "description": "Git checkout reserved for approved public JSON, icons and resume artifacts. Separate data-repository publication is not wired or deployed.",
+  "description": "Public release specification and validation for approved project/profile JSON, icons, resume PDF and deterministic integrity manifest. No real project-data release or resume has been published.",
   "icon": null,
-  "updated_at": "2026-11-02T07:05:40Z",
-  "last_change": "Successfully pushed codex/setup to the owner-created GitHub repository and prepared initial review. No default-branch changes, merges, deployment or live synchronization were performed."
+  "updated_at": "2026-11-02T07:27:44Z",
+  "last_change": "Added reusable metadata/public schemas, unpublished example, release validation tests and CI, and documented the private-automation-to-website data flow."
 }
