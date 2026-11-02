@@ -70,6 +70,19 @@ class ReleaseTests(unittest.TestCase):
         self.bundle()
         module.validate(self.root)
 
+    def test_project_only_release(self):
+        self.bundle()
+        for name in ("data/profile.json", "resume/resume.pdf"):
+            (self.root / name).unlink()
+        manifest = json.loads((self.root / "manifest.json").read_text())
+        manifest["files"] = {
+            name: value
+            for name, value in manifest["files"].items()
+            if name == "data/projects.json"
+        }
+        (self.root / "manifest.json").write_text(json.dumps(manifest))
+        module.validate(self.root)
+
     def test_draft_rejected(self):
         self.bundle(draft=True)
         with self.assertRaises(ValueError):
