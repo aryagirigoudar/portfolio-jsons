@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "projects"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "preview": {
+      "type": "boolean"
+    },
+    "projects": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "tagline",
+          "description",
+          "category",
+          "technologies",
+          "status",
+          "featured",
+          "sort_order",
+          "demo_url",
+          "source_url",
+          "icon_url",
+          "updated_at"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "tagline": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 200,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 2000,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "technologies": {
+            "type": "array",
+            "maxItems": 30,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40,
+              "pattern": "^[^<>\\x00-\\x1f]*$"
+            }
+          },
+          "status": {
+            "enum": [
+              "in_development",
+              "maintained",
+              "completed",
+              "archived",
+              "unspecified"
+            ]
+          },
+          "featured": {
+            "type": "boolean"
+          },
+          "sort_order": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10000
+          },
+          "demo_url": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "maxLength": 2048,
+                "pattern": "^https://"
+              }
+            ]
+          },
+          "source_url": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "maxLength": 2048,
+                "pattern": "^https://"
+              }
+            ]
+          },
+          "icon_url": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "pattern": "^data/icons/[a-f0-9]{64}\\.png$"
+              }
+            ]
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

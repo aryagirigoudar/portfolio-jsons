@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "title",
+    "summary",
+    "email",
+    "location",
+    "github",
+    "linkedin",
+    "skills",
+    "experience",
+    "education",
+    "schema_version",
+    "resume_url",
+    "resume_draft"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "pattern": "^[^<>\\x00-\\x1f]*$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "pattern": "^[^<>\\x00-\\x1f]*$"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "pattern": "^[^<>\\x00-\\x1f]*$"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 254,
+      "pattern": "^[A-Za-z0-9._+-]+@(?:[A-Za-z0-9-]+\\.)+[A-Za-z]{2,63}$"
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "pattern": "^[^<>\\x00-\\x1f]*$"
+    },
+    "github": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 2048
+        }
+      ]
+    },
+    "linkedin": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://",
+          "maxLength": 2048
+        }
+      ]
+    },
+    "skills": {
+      "type": "object",
+      "maxProperties": 12,
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2000,
+        "pattern": "^[^<>\\x00-\\x1f]*$"
+      },
+      "additionalProperties": {
+        "type": "array",
+        "maxItems": 30,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "pattern": "^[^<>\\x00-\\x1f]*$"
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "company",
+          "period",
+          "highlights"
+        ],
+        "properties": {
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "company": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "period": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "highlights": {
+            "type": "array",
+            "maxItems": 30,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2000,
+              "pattern": "^[^<>\\x00-\\x1f]*$"
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "qualification",
+          "institution",
+          "period"
+        ],
+        "properties": {
+          "qualification": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "institution": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "pattern": "^[^<>\\x00-\\x1f]*$"
+          },
+          "period": {
+            "type": "string",
+            "maxLength": 100
+          }
+        }
+      }
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "resume_url": {
+      "const": "resume/resume.pdf"
+    },
+    "resume_draft": {
+      "type": "boolean"
+    }
+  }
+}

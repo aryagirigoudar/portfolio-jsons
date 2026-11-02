@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "72a1b9ee-6c1f-4891-9ac0-ac62d58c2b42",
+  "published": false,
+  "title": "Project Wingman",
+  "tagline": "Personal automation platform",
+  "description": "Describe only implemented capabilities you explicitly approve for public disclosure.",
+  "icon": null,
+  "technologies": [
+    "Python",
+    "Django"
+  ],
+  "category": "Automation",
+  "status": "in_development",
+  "featured": true,
+  "sort_order": 1,
+  "demo_url": null,
+  "source_url": null,
+  "resume": {
+    "include": false,
+    "sort_order": 1,
+    "highlights": [
+      "Replace with an accurate, approved project contribution."
+    ]
+  }
+}

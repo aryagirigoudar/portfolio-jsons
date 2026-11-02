@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "files": {
+      "type": "object",
+      "minProperties": 3,
+      "maxProperties": 1003,
+      "required": [
+        "data/projects.json",
+        "data/profile.json",
+        "resume/resume.pdf"
+      ],
+      "propertyNames": {
+        "pattern": "^(?:data/(?:projects|profile)\\.json|resume/resume\\.pdf|data/icons/[a-f0-9]{64}\\.png)$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    }
+  }
+}
