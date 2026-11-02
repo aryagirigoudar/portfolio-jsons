@@ -28,3 +28,5 @@ python scripts/validate.py
 ```
 
 A schema-only scaffold passes. Partial releases, extra/missing files, unsafe paths, symlinks, corrupted hashes, invalid schemas, inconsistent icon references, or draft resume/profile data fail. The real resume is currently draft by owner instruction and is not included here.
+
+Project-only releases require just manifest.json, data/projects.json and any referenced icons. Profile JSON and resume PDF are optional but must appear together and be approved. The live project sync deliberately omits both while the owner's resume remains draft.

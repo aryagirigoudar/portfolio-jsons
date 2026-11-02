@@ -11,7 +11,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 from jsonschema.exceptions import SchemaError, ValidationError
 
 ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = {"data/projects.json", "data/profile.json", "resume/resume.pdf"}
+REQUIRED = {"data/projects.json"}
 
 
 def validate(root: Path) -> None:
@@ -50,14 +50,20 @@ def validate(root: Path) -> None:
         if hashlib.sha256(path.read_bytes()).hexdigest() != digest:
             raise ValueError("Release hash mismatch")
     records = {}
-    for name in ("projects", "profile"):
+    for name in (
+        ("projects", "profile") if "data/profile.json" in files else ("projects",)
+    ):
         records[name] = json.loads((root / f"data/{name}.json").read_text())
         Draft202012Validator(schemas[name], format_checker=FormatChecker()).validate(
             records[name]
         )
-    if records["projects"].get("preview") or records["profile"]["resume_draft"]:
+    if records["projects"].get("preview") or records.get("profile", {}).get(
+        "resume_draft", False
+    ):
         raise ValueError("Draft data cannot be published")
-    if not (root / "resume/resume.pdf").read_bytes().startswith(b"%PDF-"):
+    if "resume/resume.pdf" in files and not (
+        root / "resume/resume.pdf"
+    ).read_bytes().startswith(b"%PDF-"):
         raise ValueError("Invalid PDF")
     icons = {p["icon_url"] for p in records["projects"]["projects"] if p["icon_url"]}
     if icons != {name for name in files if name.startswith("data/icons/")}:

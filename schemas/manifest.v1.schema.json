@@ -13,12 +13,10 @@
     },
     "files": {
       "type": "object",
-      "minProperties": 3,
+      "minProperties": 1,
       "maxProperties": 1003,
       "required": [
-        "data/projects.json",
-        "data/profile.json",
-        "resume/resume.pdf"
+        "data/projects.json"
       ],
       "propertyNames": {
         "pattern": "^(?:data/(?:projects|profile)\\.json|resume/resume\\.pdf|data/icons/[a-f0-9]{64}\\.png)$"
@@ -26,6 +24,14 @@
       "additionalProperties": {
         "type": "string",
         "pattern": "^[a-f0-9]{64}$"
+      },
+      "dependentRequired": {
+        "data/profile.json": [
+          "resume/resume.pdf"
+        ],
+        "resume/resume.pdf": [
+          "data/profile.json"
+        ]
       }
     }
   }

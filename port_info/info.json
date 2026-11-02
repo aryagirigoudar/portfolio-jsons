@@ -1,7 +1,7 @@
 {
   "name": "Public portfolio data",
-  "description": "Public release specification and validation for approved project/profile JSON, icons, resume PDF and deterministic integrity manifest. No real project-data release or resume has been published.",
+  "description": "Accepts complete project-only or approved full public releases with integrity hashes and strict path/schema validation. Optional profile and PDF must occur together; draft full releases are rejected.",
   "icon": null,
-  "updated_at": "2026-11-02T07:27:44Z",
-  "last_change": "Added reusable metadata/public schemas, unpublished example, release validation tests and CI, and documented the private-automation-to-website data flow."
+  "updated_at": "2026-11-02T14:47:16Z",
+  "last_change": "Made profile/PDF optional as a pair so approved project updates can proceed without publishing the draft resume. Added validation coverage for project-only releases."
 }
