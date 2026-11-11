@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T06:25:19Z",
+  "generated_at": "2026-11-11T19:37:31Z",
   "projects": [
     {
       "category": "Project",
@@ -14,7 +14,7 @@
       "tagline": "",
       "technologies": [],
       "title": "Wingman Backend",
-      "updated_at": "2026-11-11T06:25:19Z"
+      "updated_at": "2026-11-11T19:37:31Z"
     },
     {
       "category": "Project",
@@ -29,7 +29,7 @@
       "tagline": "",
       "technologies": [],
       "title": "Job Watcher Scaffold",
-      "updated_at": "2026-11-11T06:25:19Z"
+      "updated_at": "2026-11-11T19:37:31Z"
     },
     {
       "category": "Project",
@@ -44,7 +44,7 @@
       "tagline": "",
       "technologies": [],
       "title": "Wingman Task Desk",
-      "updated_at": "2026-11-11T06:25:19Z"
+      "updated_at": "2026-11-11T19:37:31Z"
     },
     {
       "category": "Project",
@@ -59,7 +59,7 @@
       "tagline": "",
       "technologies": [],
       "title": "AutoPC",
-      "updated_at": "2026-11-11T06:25:19Z"
+      "updated_at": "2026-11-11T19:37:31Z"
     }
   ],
   "schema_version": 1
