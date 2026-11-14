@@ -1,5 +1,66 @@
 {
-  "generated_at": "2026-11-02T14:57:32Z",
-  "projects": [],
+  "generated_at": "2026-11-14T18:04:24Z",
+  "projects": [
+    {
+      "category": "Project",
+      "demo_url": null,
+      "description": "Django backend wiring account and admin pages, health endpoints, and the Google Drive workspace. Includes PostgreSQL production settings, SQLite development settings, WhiteNoise static assets, and private staging configuration for encrypted background uploads. Startup supports ignored per-installation .env files with deployment overrides and automatic persistent machine UUID initialization. Includes the Upstox authentication API app and encrypted per-user connection storage.",
+      "featured": false,
+      "icon_url": null,
+      "id": "38298b49-92be-5309-afd3-d560b65c041c",
+      "sort_order": 1,
+      "source_url": null,
+      "status": "unspecified",
+      "tagline": "",
+      "technologies": [],
+      "title": "Wingman Backend",
+      "updated_at": "2026-11-14T18:04:24Z"
+    },
+    {
+      "category": "Project",
+      "demo_url": null,
+      "description": "Configuration and validation scaffold for a planned local career-page monitor with resume matching and Discord alerts. Current source provides typed configuration and job/evaluation records, TOML path resolution, URL normalization, exact-host allowlisting, and public-address checks. Collection, matching, notification delivery, and the declared CLI entry point are not implemented in the current source.",
+      "featured": false,
+      "icon_url": null,
+      "id": "bde40c1c-9297-5417-ad3e-4cc7020138ed",
+      "sort_order": 2,
+      "source_url": null,
+      "status": "unspecified",
+      "tagline": "",
+      "technologies": [],
+      "title": "Job Watcher Scaffold",
+      "updated_at": "2026-11-14T18:04:24Z"
+    },
+    {
+      "category": "Project",
+      "demo_url": null,
+      "description": "Flask and SQLite task board with a Python CLI for design and implementation approvals, document snapshots, atomic agent claims, recurring instructions, provider cooldowns, activity history, and pull-request merge verification. Scheduled agent execution uses a separately configured adapter.",
+      "featured": false,
+      "icon_url": null,
+      "id": "057ed31a-ef82-5cb7-8c9b-f009a4bb9d25",
+      "sort_order": 3,
+      "source_url": null,
+      "status": "unspecified",
+      "tagline": "",
+      "technologies": [],
+      "title": "Wingman Task Desk",
+      "updated_at": "2026-11-14T18:04:24Z"
+    },
+    {
+      "category": "Project",
+      "demo_url": null,
+      "description": "ESP32 PC power-button controller with the existing Wi-Fi/MQTT setup and saved profiles, one-second power commands, configurable long press, startup locking, authenticated LAN PC-presence polling, active-buzzer rhythms and hourly chimes. Includes a standard-library PC presence API and a local MQTT GUI/CLI. API silence means unknown power state; physical PC shutdown depends on OS button settings. Versioned full-device backups are encrypted before Git archival; a recovery tool authenticates and verifies images using an external recovery key.",
+      "featured": false,
+      "icon_url": null,
+      "id": "f0b53a5b-047e-52cb-8233-76671a81f86c",
+      "sort_order": 4,
+      "source_url": null,
+      "status": "unspecified",
+      "tagline": "",
+      "technologies": [],
+      "title": "AutoPC",
+      "updated_at": "2026-11-14T18:04:24Z"
+    }
+  ],
   "schema_version": 1
 }
