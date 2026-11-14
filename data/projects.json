@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-13T19:44:44Z",
+  "generated_at": "2026-11-14T06:26:21Z",
   "projects": [
     {
       "category": "Project",
       "demo_url": null,
-      "description": "Django backend wiring account and admin pages, health endpoints, and the Google Drive workspace. Includes PostgreSQL production settings, SQLite development settings, WhiteNoise static assets, and private staging configuration for encrypted background uploads.",
+      "description": "Django backend wiring account and admin pages, health endpoints, and the Google Drive workspace. Includes PostgreSQL production settings, SQLite development settings, WhiteNoise static assets, and private staging configuration for encrypted background uploads. Startup supports ignored per-installation .env files with deployment overrides and automatic persistent machine UUID initialization. Includes the Upstox authentication API app and encrypted per-user connection storage.",
       "featured": false,
       "icon_url": null,
       "id": "38298b49-92be-5309-afd3-d560b65c041c",
@@ -14,7 +14,7 @@
       "tagline": "",
       "technologies": [],
       "title": "Wingman Backend",
-      "updated_at": "2026-11-13T19:44:44Z"
+      "updated_at": "2026-11-14T06:26:21Z"
     },
     {
       "category": "Project",
@@ -29,7 +29,7 @@
       "tagline": "",
       "technologies": [],
       "title": "Job Watcher Scaffold",
-      "updated_at": "2026-11-13T19:44:44Z"
+      "updated_at": "2026-11-14T06:26:21Z"
     },
     {
       "category": "Project",
@@ -44,7 +44,7 @@
       "tagline": "",
       "technologies": [],
       "title": "Wingman Task Desk",
-      "updated_at": "2026-11-13T19:44:44Z"
+      "updated_at": "2026-11-14T06:26:21Z"
     },
     {
       "category": "Project",
@@ -59,7 +59,7 @@
       "tagline": "",
       "technologies": [],
       "title": "AutoPC",
-      "updated_at": "2026-11-13T19:44:44Z"
+      "updated_at": "2026-11-14T06:26:21Z"
     }
   ],
   "schema_version": 1
